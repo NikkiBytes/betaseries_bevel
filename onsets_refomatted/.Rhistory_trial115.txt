@@ -1,0 +1,1 @@
+"labs(x=Average energy density of food images (kcal/g), y = Baseline BMI (kg/m2)) + theme_minimal()"

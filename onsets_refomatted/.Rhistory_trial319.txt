@@ -1,0 +1,1 @@
+"data$bas_rewardresponsiveness <- (data$BISBAS4_rev + data$BISBAS7_rev + data$BISBAS14_rev + data$BISBAS18_rev + data$BISBAS23_rev)/5"

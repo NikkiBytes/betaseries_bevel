@@ -1,0 +1,1 @@
+"data$bas_funseeking <- (data$BISBAS5_rev + data$BISBAS10_rev + data$BISBAS15_rev + data$BISBAS20_rev)/4"

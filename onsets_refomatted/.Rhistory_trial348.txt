@@ -1,0 +1,1 @@
+"+ data$HAND7_new + data$HAND8_new + data$HAND9_new + data$HAND10_new + data$HAND11_new + data$HAND12_new"

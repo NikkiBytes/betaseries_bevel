@@ -1,0 +1,1 @@
+"data$bis <- (data$BISBAS2 + data$BISBAS8_rev + data$BISBAS13_rev + data$BISBAS19_rev + data$BISBAS22 + data$BISBAS24_rev)"

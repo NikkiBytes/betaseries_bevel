@@ -1,0 +1,1 @@
+"write.table(a, file = trialevfilename, sep = \t, row.names = FALSE, col.names = FALSE)"

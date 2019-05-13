@@ -1,0 +1,1 @@
+"write.table(nuis1, file = '/Users/jennygilbert/Documents/betaseries_bevel/test/nuis1.txt', sep = \t, row.names = FALSE, col.names = FALSE)"

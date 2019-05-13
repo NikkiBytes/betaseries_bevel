@@ -1,0 +1,1 @@
+"reg5 <- lm(slope ~ high_ED_rating + low_ED_rating + W1BMI, data=choc)"

@@ -1,0 +1,1 @@
+"reg.ed <- lm(slope ~ unapp_ED + app_ED + W1DEBQ_restraint + W1VAShun + W1BMI + W1Sex_nu1, data=choc)"

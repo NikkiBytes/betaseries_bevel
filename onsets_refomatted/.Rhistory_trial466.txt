@@ -1,0 +1,1 @@
+"nuisevfilename <- file.path('/Users/jennygilbert/Documents/betaseries_bevel/test', paste0(subrun, _, nuis,i,.txt))"

@@ -1,0 +1,1 @@
+"cbPalette <- c(darkorange1, deepskyblue)"

@@ -1,0 +1,1 @@
+"splitfunc('bevel30_run04.txt')"

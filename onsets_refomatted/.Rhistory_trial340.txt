@@ -1,0 +1,1 @@
+"data$HAND9_new <- recode(data$HAND9,1=-1; 2=1; '1,2'=0)"

@@ -1,0 +1,1 @@
+"data <- read.delim(name, header = FALSE, sep = \t, dec = .)"

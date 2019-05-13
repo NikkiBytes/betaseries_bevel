@@ -1,0 +1,1 @@
+"tt <- read.csv(file=/Users/jennygilbert/Google Drive/NIBL/Projects/18-0417 BeveL/data/raw_data/entered_files/taste_assessment.csv, header=TRUE, sep=,)"

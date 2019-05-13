@@ -1,0 +1,1 @@
+"reg.inter <- lm(slope ~ unapp_ED + app_ED + unapp_ED*W1DEBQ_restraint + W1DEBQ_restraint + W1VAShun + W1BMI + W1Sex, data=choc)"

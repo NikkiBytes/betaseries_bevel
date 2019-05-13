@@ -1,0 +1,1 @@
+"data$handedness <- data$HAND1_new + data$HAND2_new + data$HAND3_new + data$HAND4_new + data$HAND5_new + data$HAND6_new"

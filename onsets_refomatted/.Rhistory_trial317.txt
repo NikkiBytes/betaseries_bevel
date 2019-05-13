@@ -1,0 +1,1 @@
+"data$bas_drive <- (data$BISBAS3_rev + data$BISBAS9_rev + data$BISBAS12_rev + data$BISBAS21_rev)/4"

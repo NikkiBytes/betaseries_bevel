@@ -1,0 +1,1 @@
+"reg3 <- lm(slope ~ perc_kcal_fat + perc_kcal_sug + total_kcal + W1BMI, data=choc)"

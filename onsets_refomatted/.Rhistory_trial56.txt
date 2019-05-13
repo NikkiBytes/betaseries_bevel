@@ -1,0 +1,1 @@
+"ggplot(choc, aes(unapp_rating, slope)) + geom_point(size=3, colour=deepskyblue) + geom_smooth(method = lm, se = FALSE) +"

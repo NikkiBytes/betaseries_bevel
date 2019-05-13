@@ -1,0 +1,1 @@
+"filelist <- list.files(mypath, all.files = TRUE)"

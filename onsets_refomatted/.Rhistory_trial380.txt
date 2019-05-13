@@ -1,0 +1,1 @@
+"nuis1 <- as.data.frame(data[-1,], drop=false)"

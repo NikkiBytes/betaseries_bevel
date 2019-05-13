@@ -1,0 +1,1 @@
+"reg.ed_minimal <- lm(slope ~ unapp_ED, data=choc)"

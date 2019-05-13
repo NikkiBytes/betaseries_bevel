@@ -1,0 +1,1 @@
+"reg.ed_z <- lm(BMI_z ~ unapp_ED + app_ED + W1DEBQ_restraint + W1VAShun, data=choc)"

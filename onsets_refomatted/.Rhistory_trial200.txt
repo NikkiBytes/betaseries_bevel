@@ -1,0 +1,1 @@
+"model = lme(rating ~ taste + run + taste*run,"

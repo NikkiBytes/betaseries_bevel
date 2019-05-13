@@ -1,0 +1,1 @@
+"geom_point() + geom_smooth(method=lm, se=FALSE, fullrange=TRUE) + scale_color_manual(values=cbPalette) +"
