@@ -1,0 +1,12 @@
+1	reward
+2	reward
+3	reward
+4	reward
+5	punishment
+6	reward
+7	reward
+8	reward
+9	punishment
+10	punishment
+11	punishment
+12	reward
