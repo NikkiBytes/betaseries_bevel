@@ -15,7 +15,7 @@ import numpy as numpy
 
 handles=[]
 
-basepath='/Users/jennygilbert/Documents/betaseries_bevel/task_logs'
+basepath='/Users/jennygilbert/Documents/betaseries_bevel/1_level_1/task_logs'
 os.chdir(basepath)
 
 ignore = ['DATA 	Keypress: o','Level post injecting via pump at address']
@@ -24,8 +24,8 @@ ignore = ['DATA 	Keypress: o','Level post injecting via pump at address']
 for file in glob.glob(os.path.join(basepath,'bevel*.log')):
     print(file)
 
-    sub=file.split('/')[6].split('_')[1]
-    run=file.split('/')[6].split('_')[2]
+    sub=file.split('/')[7].split('_')[1]
+    run=file.split('/')[7].split('_')[2]
     print([sub,run])
     
 #   open the script and read in log data
@@ -47,7 +47,7 @@ for file in glob.glob(os.path.join(basepath,'bevel*.log')):
                     l_s=x.strip().split()
                     start_time=float(l_s[0])
                     
-                if x.find('Level injecting via pump at address ')>-1:#find the tasty image
+                if x.find('position=')>-1:#find the tasty image
                     l_s=x.strip().split()
 #                    print(l_s)
                     trials.append(l_s[0])
@@ -64,13 +64,13 @@ for file in glob.glob(os.path.join(basepath,'bevel*.log')):
         #files2make=['trials','rinse']
         #mydict={}
  
-    path='%s_%s_.txt'%(sub,run)
+    path='%s_%s_choice.txt'%(sub,run)
     print(path)
     print(sub)
     
     f_make=open(path, 'w')
     for a in trials1:
-        f_make.write(str(a)+'\t'+'5'+'\t'+'1'+'\n')
+        f_make.write(str(a)+'\t'+'2'+'\t'+'1'+'\n')
     f_make.close()
                
 #        f_neu=open(mydict['rinse'], 'w')
