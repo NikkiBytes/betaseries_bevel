@@ -22,6 +22,5 @@ write.table(mydata.p, file = "sub-003_reward_pvalue.csv", append = FALSE, sep = 
             row.names = TRUE, col.names = TRUE)
 
 pdf("sub-003_reward_rplot.pdf")
-corrplot(mydata.rcorr$r, type="upper", order="hclust", 
-         p.mat = mydata.rcorr$P, sig.level = 0.01, insig = "blank")
+corrplot(mydata.rcorr$r, method = "color", p.mat = mydata.rcorr$P, sig.level = 0.001, insig = "label_sig")
 dev.off() 
