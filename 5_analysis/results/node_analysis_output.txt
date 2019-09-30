@@ -1,0 +1,1045 @@
+  [1] "ID"                                        
+  [2] "Amygdala_L_cluster_reward"                 
+  [3] "Amygdala_R_cluster_reward"                 
+  [4] "Dorsal_striatum_L_cluster_reward"          
+  [5] "Dorsal_striatum_R_cluster_reward"          
+  [6] "Fusiform_gyrus_L_cluster_reward"           
+  [7] "Fusiform_gyrus_R_cluster_reward"           
+  [8] "Hippocampus_L_cluster_reward"              
+  [9] "Hippocampus_R_cluster_reward"              
+ [10] "Insula_L_cluster_reward"                   
+ [11] "Insula_R_cluster_reward"                   
+ [12] "Intracalcarine_cortex_L_cluster_reward"    
+ [13] "Intracalcarine_cortex_R_cluster_reward"    
+ [14] "lOFC_L_cluster_reward"                     
+ [15] "lOFC_R_cluster_reward"                     
+ [16] "mOFC_L_cluster_reward"                     
+ [17] "mOFC_R_cluster_reward"                     
+ [18] "Oral_somatosensory_cortex_R_cluster_reward"
+ [19] "Oral_somatosensory_cortex_L_cluster_reward"
+ [20] "Precuneus_L_cluster_reward"                
+ [21] "Precuneus_R_cluster_reward"                
+ [22] "Ventral_striatum_L_cluster_reward"         
+ [23] "Ventral_striatum_R_cluster_reward"         
+ [24] "vlPFC_L_cluster_reward"                    
+ [25] "vlPFC_R_cluster_reward"                    
+ [26] "vlThalamus_L_cluster_reward"               
+ [27] "vlThalamus_R_cluster_reward"               
+ [28] "vmPFC_L_cluster_reward"                    
+ [29] "vmPFC_R_cluster_reward"                    
+ [30] "Amygdala_L_central_reward"                 
+ [31] "Amygdala_R_central_reward"                 
+ [32] "Dorsal_striatum_L_central_reward"          
+ [33] "Dorsal_striatum_R_central_reward"          
+ [34] "Fusiform_gyrus_L_central_reward"           
+ [35] "Fusiform_gyrus_R_central_reward"           
+ [36] "Hippocampus_L_central_reward"              
+ [37] "Hippocampus_R_central_reward"              
+ [38] "Insula_L_central_reward"                   
+ [39] "Insula_R_central_reward"                   
+ [40] "Intracalcarine_cortex_L_central_reward"    
+ [41] "Intracalcarine_cortex_R_central_reward"    
+ [42] "lOFC_L_central_reward"                     
+ [43] "lOFC_R_central_reward"                     
+ [44] "mOFC_L_central_reward"                     
+ [45] "mOFC_R_central_reward"                     
+ [46] "Oral_somatosensory_cortex_R_central_reward"
+ [47] "Oral_somatosensory_cortex_L_central_reward"
+ [48] "Precuneus_L_central_reward"                
+ [49] "Precuneus_R_central_reward"                
+ [50] "Ventral_striatum_L_central_reward"         
+ [51] "Ventral_striatum_R_central_reward"         
+ [52] "vlPFC_L_central_reward"                    
+ [53] "vlPFC_R_central_reward"                    
+ [54] "vlThalamus_L_central_reward"               
+ [55] "vlThalamus_R_central_reward"               
+ [56] "vmPFC_L_central_reward"                    
+ [57] "vmPFC_R_central_reward"                    
+ [58] "Amygdala_L_cluster_punish"                 
+ [59] "Amygdala_R_cluster_punish"                 
+ [60] "Dorsal_striatum_L_cluster_punish"          
+ [61] "Dorsal_striatum_R_cluster_punish"          
+ [62] "Fusiform_gyrus_L_cluster_punish"           
+ [63] "Fusiform_gyrus_R_cluster_punish"           
+ [64] "Hippocampus_L_cluster_punish"              
+ [65] "Hippocampus_R_cluster_punish"              
+ [66] "Insula_L_cluster_punish"                   
+ [67] "Insula_R_cluster_punish"                   
+ [68] "Intracalcarine_cortex_L_cluster_punish"    
+ [69] "Intracalcarine_cortex_R_cluster_punish"    
+ [70] "lOFC_L_cluster_punish"                     
+ [71] "lOFC_R_cluster_punish"                     
+ [72] "mOFC_L_cluster_punish"                     
+ [73] "mOFC_R_cluster_punish"                     
+ [74] "Oral_somatosensory_cortex_R_cluster_punish"
+ [75] "Oral_somatosensory_cortex_L_cluster_punish"
+ [76] "Precuneus_L_cluster_punish"                
+ [77] "Precuneus_R_cluster_punish"                
+ [78] "Ventral_striatum_L_cluster_punish"         
+ [79] "Ventral_striatum_R_cluster_punish"         
+ [80] "vlPFC_L_cluster_punish"                    
+ [81] "vlPFC_R_cluster_punish"                    
+ [82] "vlThalamus_L_cluster_punish"               
+ [83] "vlThalamus_R_cluster_punish"               
+ [84] "vmPFC_L_cluster_punish"                    
+ [85] "vmPFC_R_cluster_punish"                    
+ [86] "Amygdala_L_central_punish"                 
+ [87] "Amygdala_R_central_punish"                 
+ [88] "Dorsal_striatum_L_central_punish"          
+ [89] "Dorsal_striatum_R_central_punish"          
+ [90] "Fusiform_gyrus_L_central_punish"           
+ [91] "Fusiform_gyrus_R_central_punish"           
+ [92] "Hippocampus_L_central_punish"              
+ [93] "Hippocampus_R_central_punish"              
+ [94] "Insula_L_central_punish"                   
+ [95] "Insula_R_central_punish"                   
+ [96] "Intracalcarine_cortex_L_central_punish"    
+ [97] "Intracalcarine_cortex_R_central_punish"    
+ [98] "lOFC_L_central_punish"                     
+ [99] "lOFC_R_central_punish"                     
+[100] "mOFC_L_central_punish"                     
+[101] "mOFC_R_central_punish"                     
+[102] "Oral_somatosensory_cortex_R_central_punish"
+[103] "Oral_somatosensory_cortex_L_central_punish"
+[104] "Precuneus_L_central_punish"                
+[105] "Precuneus_R_central_punish"                
+[106] "Ventral_striatum_L_central_punish"         
+[107] "Ventral_striatum_R_central_punish"         
+[108] "vlPFC_L_central_punish"                    
+[109] "vlPFC_R_central_punish"                    
+[110] "vlThalamus_L_central_punish"               
+[111] "vlThalamus_R_central_punish"               
+[112] "vmPFC_L_central_punish"                    
+[113] "vmPFC_R_central_punish"                    
+                                           vars  n  mean    sd median
+ID                                            1 85 45.87 26.37  45.00
+Amygdala_L_cluster_reward                     2 85  0.62  0.29   0.67
+Amygdala_R_cluster_reward                     3 85  0.56  0.31   0.62
+Dorsal_striatum_L_cluster_reward              4 85  0.66  0.19   0.67
+Dorsal_striatum_R_cluster_reward              5 85  0.65  0.18   0.65
+Fusiform_gyrus_L_cluster_reward               6 85  0.56  0.24   0.61
+Fusiform_gyrus_R_cluster_reward               7 85  0.60  0.30   0.62
+Hippocampus_L_cluster_reward                  8 85  0.61  0.18   0.64
+Hippocampus_R_cluster_reward                  9 85  0.61  0.20   0.64
+Insula_L_cluster_reward                      10 85  0.65  0.19   0.67
+Insula_R_cluster_reward                      11 85  0.65  0.20   0.67
+Intracalcarine_cortex_L_cluster_reward       12 85  0.61  0.25   0.64
+Intracalcarine_cortex_R_cluster_reward       13 85  0.60  0.21   0.62
+lOFC_L_cluster_reward                        14 85  0.55  0.30   0.62
+lOFC_R_cluster_reward                        15 85  0.56  0.27   0.61
+mOFC_L_cluster_reward                        16 85  0.62  0.24   0.67
+mOFC_R_cluster_reward                        17 85  0.57  0.24   0.60
+Oral_somatosensory_cortex_R_cluster_reward   18 85  0.68  0.19   0.68
+Oral_somatosensory_cortex_L_cluster_reward   19 85  0.65  0.17   0.61
+Precuneus_L_cluster_reward                   20 85  0.54  0.36   0.67
+Precuneus_R_cluster_reward                   21 85  0.59  0.28   0.65
+Ventral_striatum_L_cluster_reward            22 85  0.66  0.21   0.67
+Ventral_striatum_R_cluster_reward            23 85  0.59  0.27   0.62
+vlPFC_L_cluster_reward                       24 85  0.68  0.22   0.68
+vlPFC_R_cluster_reward                       25 85  0.69  0.27   0.75
+vlThalamus_L_cluster_reward                  26 85  0.64  0.23   0.67
+vlThalamus_R_cluster_reward                  27 85  0.64  0.19   0.64
+vmPFC_L_cluster_reward                       28 85  0.66  0.19   0.68
+vmPFC_R_cluster_reward                       29 85  0.65  0.21   0.65
+Amygdala_L_central_reward                    30 85  0.03  0.05   0.01
+Amygdala_R_central_reward                    31 85  0.02  0.03   0.01
+Dorsal_striatum_L_central_reward             32 85  0.04  0.04   0.03
+Dorsal_striatum_R_central_reward             33 85  0.04  0.05   0.02
+Fusiform_gyrus_L_central_reward              34 85  0.04  0.04   0.02
+Fusiform_gyrus_R_central_reward              35 85  0.02  0.04   0.01
+Hippocampus_L_central_reward                 36 85  0.04  0.04   0.03
+Hippocampus_R_central_reward                 37 85  0.03  0.03   0.02
+Insula_L_central_reward                      38 85  0.04  0.05   0.02
+Insula_R_central_reward                      39 85  0.03  0.04   0.02
+Intracalcarine_cortex_L_central_reward       40 85  0.04  0.05   0.02
+Intracalcarine_cortex_R_central_reward       41 85  0.04  0.04   0.02
+lOFC_L_central_reward                        42 85  0.03  0.04   0.01
+lOFC_R_central_reward                        43 85  0.03  0.04   0.02
+mOFC_L_central_reward                        44 85  0.02  0.03   0.01
+mOFC_R_central_reward                        45 85  0.03  0.04   0.02
+Oral_somatosensory_cortex_R_central_reward   46 85  0.03  0.04   0.02
+Oral_somatosensory_cortex_L_central_reward   47 85  0.04  0.04   0.03
+Precuneus_L_central_reward                   48 85  0.01  0.03   0.00
+Precuneus_R_central_reward                   49 85  0.03  0.04   0.01
+Ventral_striatum_L_central_reward            50 85  0.03  0.05   0.02
+Ventral_striatum_R_central_reward            51 85  0.03  0.04   0.01
+vlPFC_L_central_reward                       52 85  0.03  0.04   0.01
+vlPFC_R_central_reward                       53 85  0.01  0.02   0.01
+vlThalamus_L_central_reward                  54 85  0.03  0.03   0.02
+vlThalamus_R_central_reward                  55 85  0.03  0.03   0.02
+vmPFC_L_central_reward                       56 85  0.03  0.04   0.02
+vmPFC_R_central_reward                       57 85  0.03  0.03   0.02
+Amygdala_L_cluster_punish                    58 85  0.60  0.28   0.67
+Amygdala_R_cluster_punish                    59 85  0.57  0.32   0.66
+Dorsal_striatum_L_cluster_punish             60 85  0.63  0.20   0.64
+Dorsal_striatum_R_cluster_punish             61 85  0.63  0.20   0.66
+Fusiform_gyrus_L_cluster_punish              62 85  0.58  0.25   0.60
+Fusiform_gyrus_R_cluster_punish              63 85  0.62  0.29   0.67
+Hippocampus_L_cluster_punish                 64 85  0.63  0.19   0.64
+Hippocampus_R_cluster_punish                 65 85  0.59  0.21   0.62
+Insula_L_cluster_punish                      66 85  0.63  0.20   0.66
+Insula_R_cluster_punish                      67 85  0.64  0.22   0.67
+Intracalcarine_cortex_L_cluster_punish       68 85  0.67  0.19   0.67
+Intracalcarine_cortex_R_cluster_punish       69 85  0.64  0.18   0.65
+lOFC_L_cluster_punish                        70 85  0.59  0.30   0.67
+lOFC_R_cluster_punish                        71 85  0.56  0.28   0.61
+mOFC_L_cluster_punish                        72 85  0.65  0.24   0.68
+mOFC_R_cluster_punish                        73 85  0.60  0.24   0.62
+Oral_somatosensory_cortex_R_cluster_punish   74 85  0.69  0.18   0.67
+Oral_somatosensory_cortex_L_cluster_punish   75 85  0.67  0.15   0.67
+Precuneus_L_cluster_punish                   76 85  0.48  0.36   0.61
+                                           trimmed   mad  min   max range
+ID                                           45.94 34.10 1.00 90.00 89.00
+Amygdala_L_cluster_reward                     0.65  0.28 0.00  1.00  1.00
+Amygdala_R_cluster_reward                     0.58  0.25 0.00  1.00  1.00
+Dorsal_striatum_L_cluster_reward              0.66  0.20 0.00  1.00  1.00
+Dorsal_striatum_R_cluster_reward              0.66  0.17 0.00  1.00  1.00
+Fusiform_gyrus_L_cluster_reward               0.58  0.20 0.00  1.00  1.00
+Fusiform_gyrus_R_cluster_reward               0.62  0.28 0.00  1.00  1.00
+Hippocampus_L_cluster_reward                  0.62  0.10 0.00  1.00  1.00
+Hippocampus_R_cluster_reward                  0.62  0.12 0.00  1.00  1.00
+Insula_L_cluster_reward                       0.68  0.13 0.00  0.98  0.98
+Insula_R_cluster_reward                       0.67  0.15 0.00  1.00  1.00
+Intracalcarine_cortex_L_cluster_reward        0.63  0.24 0.00  1.00  1.00
+Intracalcarine_cortex_R_cluster_reward        0.60  0.22 0.00  1.00  1.00
+lOFC_L_cluster_reward                         0.56  0.27 0.00  1.00  1.00
+lOFC_R_cluster_reward                         0.57  0.26 0.00  1.00  1.00
+mOFC_L_cluster_reward                         0.64  0.21 0.00  1.00  1.00
+mOFC_R_cluster_reward                         0.58  0.20 0.00  1.00  1.00
+Oral_somatosensory_cortex_R_cluster_reward    0.68  0.17 0.00  1.00  1.00
+Oral_somatosensory_cortex_L_cluster_reward    0.65  0.13 0.00  1.00  1.00
+Precuneus_L_cluster_reward                    0.55  0.40 0.00  1.00  1.00
+Precuneus_R_cluster_reward                    0.62  0.23 0.00  1.00  1.00
+Ventral_striatum_L_cluster_reward             0.67  0.19 0.00  1.00  1.00
+Ventral_striatum_R_cluster_reward             0.61  0.22 0.00  1.00  1.00
+vlPFC_L_cluster_reward                        0.69  0.23 0.00  1.00  1.00
+vlPFC_R_cluster_reward                        0.73  0.18 0.00  1.00  1.00
+vlThalamus_L_cluster_reward                   0.66  0.19 0.00  1.00  1.00
+vlThalamus_R_cluster_reward                   0.65  0.17 0.00  1.00  1.00
+vmPFC_L_cluster_reward                        0.68  0.16 0.00  1.00  1.00
+vmPFC_R_cluster_reward                        0.67  0.20 0.00  1.00  1.00
+Amygdala_L_central_reward                     0.02  0.01 0.00  0.29  0.29
+Amygdala_R_central_reward                     0.02  0.01 0.00  0.10  0.10
+Dorsal_striatum_L_central_reward              0.04  0.04 0.00  0.14  0.14
+Dorsal_striatum_R_central_reward              0.03  0.02 0.00  0.28  0.28
+Fusiform_gyrus_L_central_reward               0.03  0.02 0.00  0.23  0.23
+Fusiform_gyrus_R_central_reward               0.02  0.01 0.00  0.23  0.23
+Hippocampus_L_central_reward                  0.03  0.03 0.00  0.26  0.26
+Hippocampus_R_central_reward                  0.03  0.02 0.00  0.17  0.17
+Insula_L_central_reward                       0.03  0.02 0.00  0.31  0.31
+Insula_R_central_reward                       0.03  0.02 0.00  0.24  0.24
+Intracalcarine_cortex_L_central_reward        0.03  0.03 0.00  0.23  0.23
+Intracalcarine_cortex_R_central_reward        0.03  0.02 0.00  0.20  0.20
+lOFC_L_central_reward                         0.02  0.02 0.00  0.21  0.21
+lOFC_R_central_reward                         0.02  0.02 0.00  0.18  0.18
+mOFC_L_central_reward                         0.02  0.01 0.00  0.13  0.13
+mOFC_R_central_reward                         0.03  0.03 0.00  0.20  0.20
+Oral_somatosensory_cortex_R_central_reward    0.02  0.02 0.00  0.17  0.17
+Oral_somatosensory_cortex_L_central_reward    0.04  0.03 0.00  0.25  0.25
+Precuneus_L_central_reward                    0.01  0.00 0.00  0.22  0.22
+Precuneus_R_central_reward                    0.02  0.02 0.00  0.17  0.17
+Ventral_striatum_L_central_reward             0.02  0.02 0.00  0.33  0.33
+Ventral_striatum_R_central_reward             0.02  0.02 0.00  0.24  0.24
+vlPFC_L_central_reward                        0.02  0.02 0.00  0.19  0.19
+vlPFC_R_central_reward                        0.01  0.01 0.00  0.11  0.11
+vlThalamus_L_central_reward                   0.02  0.02 0.00  0.11  0.11
+vlThalamus_R_central_reward                   0.02  0.02 0.00  0.15  0.15
+vmPFC_L_central_reward                        0.02  0.02 0.00  0.21  0.21
+vmPFC_R_central_reward                        0.02  0.03 0.00  0.14  0.14
+Amygdala_L_cluster_punish                     0.63  0.23 0.00  1.00  1.00
+Amygdala_R_cluster_punish                     0.58  0.25 0.00  1.00  1.00
+Dorsal_striatum_L_cluster_punish              0.64  0.17 0.00  1.00  1.00
+Dorsal_striatum_R_cluster_punish              0.65  0.18 0.00  0.95  0.95
+Fusiform_gyrus_L_cluster_punish               0.59  0.20 0.00  1.00  1.00
+Fusiform_gyrus_R_cluster_punish               0.64  0.28 0.00  1.00  1.00
+Hippocampus_L_cluster_punish                  0.63  0.16 0.00  1.00  1.00
+Hippocampus_R_cluster_punish                  0.61  0.16 0.00  0.93  0.93
+Insula_L_cluster_punish                       0.65  0.17 0.00  0.93  0.93
+Insula_R_cluster_punish                       0.66  0.19 0.00  0.98  0.98
+Intracalcarine_cortex_L_cluster_punish        0.67  0.20 0.27  1.00  0.73
+Intracalcarine_cortex_R_cluster_punish        0.64  0.18 0.25  1.00  0.75
+lOFC_L_cluster_punish                         0.61  0.27 0.00  1.00  1.00
+lOFC_R_cluster_punish                         0.58  0.28 0.00  1.00  1.00
+mOFC_L_cluster_punish                         0.67  0.19 0.00  1.00  1.00
+mOFC_R_cluster_punish                         0.62  0.21 0.00  1.00  1.00
+Oral_somatosensory_cortex_R_cluster_punish    0.70  0.19 0.00  1.00  1.00
+Oral_somatosensory_cortex_L_cluster_punish    0.67  0.13 0.33  1.00  0.67
+Precuneus_L_cluster_punish                    0.48  0.41 0.00  1.00  1.00
+                                            skew kurtosis   se
+ID                                         -0.01    -1.26 2.86
+Amygdala_L_cluster_reward                  -0.61    -0.30 0.03
+Amygdala_R_cluster_reward                  -0.64    -0.61 0.03
+Dorsal_striatum_L_cluster_reward           -0.43     0.50 0.02
+Dorsal_striatum_R_cluster_reward           -0.96     2.06 0.02
+Fusiform_gyrus_L_cluster_reward            -0.71     0.22 0.03
+Fusiform_gyrus_R_cluster_reward            -0.51    -0.49 0.03
+Hippocampus_L_cluster_reward               -0.78     2.41 0.02
+Hippocampus_R_cluster_reward               -0.85     1.82 0.02
+Insula_L_cluster_reward                    -1.48     3.11 0.02
+Insula_R_cluster_reward                    -0.70     0.73 0.02
+Intracalcarine_cortex_L_cluster_reward     -0.38    -0.15 0.03
+Intracalcarine_cortex_R_cluster_reward     -0.28     0.01 0.02
+lOFC_L_cluster_reward                      -0.55    -0.65 0.03
+lOFC_R_cluster_reward                      -0.56    -0.35 0.03
+mOFC_L_cluster_reward                      -0.90     0.60 0.03
+mOFC_R_cluster_reward                      -0.39     0.02 0.03
+Oral_somatosensory_cortex_R_cluster_reward -0.79     1.84 0.02
+Oral_somatosensory_cortex_L_cluster_reward -0.41     1.66 0.02
+Precuneus_L_cluster_reward                 -0.41    -1.21 0.04
+Precuneus_R_cluster_reward                 -0.77    -0.08 0.03
+Ventral_striatum_L_cluster_reward          -0.58     0.82 0.02
+Ventral_striatum_R_cluster_reward          -0.73     0.05 0.03
+vlPFC_L_cluster_reward                     -0.52     0.03 0.02
+vlPFC_R_cluster_reward                     -1.33     1.29 0.03
+vlThalamus_L_cluster_reward                -0.69     0.79 0.03
+vlThalamus_R_cluster_reward                -1.00     1.86 0.02
+vmPFC_L_cluster_reward                     -0.71     0.79 0.02
+vmPFC_R_cluster_reward                     -0.81     1.22 0.02
+Amygdala_L_central_reward                   3.19    13.42 0.00
+Amygdala_R_central_reward                   1.24     0.33 0.00
+Dorsal_striatum_L_central_reward            0.95    -0.04 0.00
+Dorsal_striatum_R_central_reward            2.67     9.09 0.00
+Fusiform_gyrus_L_central_reward             1.75     3.53 0.00
+Fusiform_gyrus_R_central_reward             2.88    10.60 0.00
+Hippocampus_L_central_reward                2.40     8.48 0.00
+Hippocampus_R_central_reward                1.68     2.86 0.00
+Insula_L_central_reward                     3.20    14.16 0.00
+Insula_R_central_reward                     2.15     5.40 0.00
+Intracalcarine_cortex_L_central_reward      1.64     2.44 0.01
+Intracalcarine_cortex_R_central_reward      1.70     2.41 0.00
+lOFC_L_central_reward                       1.92     4.03 0.00
+lOFC_R_central_reward                       1.71     2.63 0.00
+mOFC_L_central_reward                       1.92     3.39 0.00
+mOFC_R_central_reward                       1.70     2.60 0.00
+Oral_somatosensory_cortex_R_central_reward  2.09     4.45 0.00
+Oral_somatosensory_cortex_L_central_reward  2.11     7.22 0.00
+Precuneus_L_central_reward                  4.35    21.25 0.00
+Precuneus_R_central_reward                  1.98     3.67 0.00
+Ventral_striatum_L_central_reward           3.44    16.74 0.01
+Ventral_striatum_R_central_reward           2.70     9.54 0.00
+vlPFC_L_central_reward                      2.43     6.51 0.00
+vlPFC_R_central_reward                      2.48     6.07 0.00
+vlThalamus_L_central_reward                 1.08     0.51 0.00
+vlThalamus_R_central_reward                 1.80     2.84 0.00
+vmPFC_L_central_reward                      2.16     4.84 0.00
+vmPFC_R_central_reward                      1.35     2.55 0.00
+Amygdala_L_cluster_punish                  -0.80     0.00 0.03
+Amygdala_R_cluster_punish                  -0.60    -0.72 0.03
+Dorsal_striatum_L_cluster_punish           -0.99     1.94 0.02
+Dorsal_striatum_R_cluster_punish           -0.97     1.26 0.02
+Fusiform_gyrus_L_cluster_punish            -0.42     0.04 0.03
+Fusiform_gyrus_R_cluster_punish            -0.57    -0.35 0.03
+Hippocampus_L_cluster_punish               -0.66     1.62 0.02
+Hippocampus_R_cluster_punish               -0.86     0.75 0.02
+Insula_L_cluster_punish                    -1.30     2.23 0.02
+Insula_R_cluster_punish                    -0.96     1.01 0.02
+Intracalcarine_cortex_L_cluster_punish      0.16    -0.84 0.02
+Intracalcarine_cortex_R_cluster_punish      0.02    -0.63 0.02
+lOFC_L_cluster_punish                      -0.64    -0.53 0.03
+lOFC_R_cluster_punish                      -0.61    -0.47 0.03
+mOFC_L_cluster_punish                      -0.99     0.83 0.03
+mOFC_R_cluster_punish                      -0.62     0.30 0.03
+Oral_somatosensory_cortex_R_cluster_punish -0.62     1.47 0.02
+Oral_somatosensory_cortex_L_cluster_punish  0.23    -0.53 0.02
+Precuneus_L_cluster_punish                 -0.25    -1.40 0.04
+ [ reached getOption("max.print") -- omitted 37 rows ]
+ [1] "ID"                          "metric"                     
+ [3] "condition"                   "Amygdala_L"                 
+ [5] "Amygdala_R"                  "Dorsal_striatum_L"          
+ [7] "Dorsal_striatum_R"           "Fusiform_gyrus_L"           
+ [9] "Fusiform_gyrus_R"            "Hippocampus_L"              
+[11] "Hippocampus_R"               "Insula_L"                   
+[13] "Insula_R"                    "Intracalcarine_cortex_L"    
+[15] "Intracalcarine_cortex_R"     "lOFC_L"                     
+[17] "lOFC_R"                      "mOFC_L"                     
+[19] "mOFC_R"                      "Oral_somatosensory_cortex_R"
+[21] "Oral_somatosensory_cortex_L" "Precuneus_L"                
+[23] "Precuneus_R"                 "Ventral_striatum_L"         
+[25] "Ventral_striatum_R"          "vlPFC_L"                    
+[27] "vlPFC_R"                     "vlThalamus_L"               
+[29] "vlThalamus_R"                "vmPFC_L"                    
+[31] "vmPFC_R"                    
+
+	Welch Two Sample t-test
+
+data:  Amygdala_L by condition
+t = -0.44718, df = 167.86, p-value = 0.6553
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.1064958  0.0671608
+sample estimates:
+mean in group punish mean in group reward 
+           0.6019276            0.6215951 
+
+
+	Welch Two Sample t-test
+
+data:  Amygdala_R by condition
+t = 0.095971, df = 167.88, p-value = 0.9237
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.09149681  0.10084722
+sample estimates:
+mean in group punish mean in group reward 
+           0.5684576            0.5637824 
+
+
+	Welch Two Sample t-test
+
+data:  Dorsal_striatum_L by condition
+t = -0.90358, df = 167.83, p-value = 0.3675
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.08519617  0.03169561
+sample estimates:
+mean in group punish mean in group reward 
+           0.6293308            0.6560810 
+
+
+	Welch Two Sample t-test
+
+data:  Dorsal_striatum_R by condition
+t = -0.48418, df = 166.22, p-value = 0.6289
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.07284685  0.04415374
+sample estimates:
+mean in group punish mean in group reward 
+           0.6310131            0.6453596 
+
+
+	Welch Two Sample t-test
+
+data:  Fusiform_gyrus_L by condition
+t = 0.51929, df = 167.77, p-value = 0.6042
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.05375803  0.09213323
+sample estimates:
+mean in group punish mean in group reward 
+           0.5838034            0.5646158 
+
+
+	Welch Two Sample t-test
+
+data:  Fusiform_gyrus_R by condition
+t = 0.45668, df = 167.88, p-value = 0.6485
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.06827894  0.10937445
+sample estimates:
+mean in group punish mean in group reward 
+           0.6176988            0.5971511 
+
+
+	Welch Two Sample t-test
+
+data:  Hippocampus_L by condition
+t = 0.45046, df = 167.55, p-value = 0.653
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.04220155  0.06715333
+sample estimates:
+mean in group punish mean in group reward 
+           0.6274250            0.6149491 
+
+
+	Welch Two Sample t-test
+
+data:  Hippocampus_R by condition
+t = -0.33556, df = 167.88, p-value = 0.7376
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.07336356  0.05204720
+sample estimates:
+mean in group punish mean in group reward 
+           0.5946469            0.6053051 
+
+
+	Welch Two Sample t-test
+
+data:  Insula_L by condition
+t = -0.76321, df = 167.38, p-value = 0.4464
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.08200337  0.03627770
+sample estimates:
+mean in group punish mean in group reward 
+           0.6307119            0.6535748 
+
+
+	Welch Two Sample t-test
+
+data:  Insula_R by condition
+t = -0.44796, df = 166.59, p-value = 0.6548
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.07848257  0.04945420
+sample estimates:
+mean in group punish mean in group reward 
+           0.6393964            0.6539106 
+
+
+	Welch Two Sample t-test
+
+data:  Intracalcarine_cortex_L by condition
+t = 1.5557, df = 156.76, p-value = 0.1218
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01443658  0.12150459
+sample estimates:
+mean in group punish mean in group reward 
+           0.6685099            0.6149759 
+
+
+	Welch Two Sample t-test
+
+data:  Intracalcarine_cortex_R by condition
+t = 1.1752, df = 163.9, p-value = 0.2416
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.02419110  0.09532139
+sample estimates:
+mean in group punish mean in group reward 
+           0.6400637            0.6044985 
+
+
+	Welch Two Sample t-test
+
+data:  lOFC_L by condition
+t = 0.83854, df = 167.99, p-value = 0.4029
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.05218358  0.12924659
+sample estimates:
+mean in group punish mean in group reward 
+           0.5879489            0.5494174 
+
+
+	Welch Two Sample t-test
+
+data:  lOFC_R by condition
+t = 0.14972, df = 167.69, p-value = 0.8812
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.07770093  0.09045347
+sample estimates:
+mean in group punish mean in group reward 
+           0.5635820            0.5572057 
+
+
+	Welch Two Sample t-test
+
+data:  mOFC_L by condition
+t = 0.6423, df = 167.98, p-value = 0.5216
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.04910839  0.09647350
+sample estimates:
+mean in group punish mean in group reward 
+           0.6458802            0.6221976 
+
+
+	Welch Two Sample t-test
+
+data:  mOFC_R by condition
+t = 0.757, df = 168, p-value = 0.4501
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.04556187  0.10223409
+sample estimates:
+mean in group punish mean in group reward 
+           0.6024421            0.5741060 
+
+
+	Welch Two Sample t-test
+
+data:  Oral_somatosensory_cortex_R by condition
+t = 0.4871, df = 167.49, p-value = 0.6268
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.04269754  0.07066794
+sample estimates:
+mean in group punish mean in group reward 
+           0.6907290            0.6767438 
+
+
+	Welch Two Sample t-test
+
+data:  Oral_somatosensory_cortex_L by condition
+t = 0.66558, df = 164.17, p-value = 0.5066
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.03227941  0.06510683
+sample estimates:
+mean in group punish mean in group reward 
+           0.6695461            0.6531324 
+
+
+	Welch Two Sample t-test
+
+data:  Precuneus_L by condition
+t = -0.99478, df = 168, p-value = 0.3213
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.16275472  0.05368992
+sample estimates:
+mean in group punish mean in group reward 
+           0.4833981            0.5379305 
+
+
+	Welch Two Sample t-test
+
+data:  Precuneus_R by condition
+t = 0.25449, df = 167.32, p-value = 0.7994
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.07500732  0.09720693
+sample estimates:
+mean in group punish mean in group reward 
+           0.6026133            0.5915135 
+
+
+	Welch Two Sample t-test
+
+data:  Ventral_striatum_L by condition
+t = 0.076884, df = 164.7, p-value = 0.9388
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.06608163  0.07143645
+sample estimates:
+mean in group punish mean in group reward 
+           0.6611514            0.6584740 
+
+
+	Welch Two Sample t-test
+
+data:  Ventral_striatum_R by condition
+t = 0.89308, df = 167.9, p-value = 0.3731
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.04434489  0.11760969
+sample estimates:
+mean in group punish mean in group reward 
+           0.6273146            0.5906822 
+
+
+	Welch Two Sample t-test
+
+data:  vlPFC_L by condition
+t = 0.69534, df = 167.05, p-value = 0.4878
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.04148326  0.08659132
+sample estimates:
+mean in group punish mean in group reward 
+           0.7057458            0.6831918 
+
+
+	Welch Two Sample t-test
+
+data:  vlPFC_R by condition
+t = -0.083152, df = 167.91, p-value = 0.9338
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.08471870  0.07787055
+sample estimates:
+mean in group punish mean in group reward 
+           0.6903465            0.6937706 
+
+
+	Welch Two Sample t-test
+
+data:  vlThalamus_L by condition
+t = 0.18967, df = 167.56, p-value = 0.8498
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.06252489  0.07581608
+sample estimates:
+mean in group punish mean in group reward 
+           0.6459897            0.6393442 
+
+
+	Welch Two Sample t-test
+
+data:  vlThalamus_R by condition
+t = 0.31128, df = 166.19, p-value = 0.756
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.05052943  0.06944512
+sample estimates:
+mean in group punish mean in group reward 
+           0.6448229            0.6353650 
+
+
+	Welch Two Sample t-test
+
+data:  vmPFC_L by condition
+t = -0.66202, df = 166.76, p-value = 0.5089
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.07235656  0.03601691
+sample estimates:
+mean in group punish mean in group reward 
+           0.6450843            0.6632541 
+
+
+	Welch Two Sample t-test
+
+data:  vmPFC_R by condition
+t = 0.58776, df = 166.58, p-value = 0.5575
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.04358844  0.08054263
+sample estimates:
+mean in group punish mean in group reward 
+           0.6724074            0.6539303 
+
+
+	Welch Two Sample t-test
+
+data:  Amygdala_L by condition
+t = -0.96862, df = 158.83, p-value = 0.3342
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.018458184  0.006310651
+sample estimates:
+mean in group punish mean in group reward 
+          0.02139090           0.02746467 
+
+
+	Welch Two Sample t-test
+
+data:  Amygdala_L by condition
+t = -0.96862, df = 158.83, p-value = 0.3342
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.018458184  0.006310651
+sample estimates:
+mean in group punish mean in group reward 
+          0.02139090           0.02746467 
+
+
+	Welch Two Sample t-test
+
+data:  Amygdala_R by condition
+t = -0.3168, df = 153.5, p-value = 0.7518
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.011699672  0.008465886
+sample estimates:
+mean in group punish mean in group reward 
+          0.02006179           0.02167868 
+
+
+	Welch Two Sample t-test
+
+data:  Dorsal_striatum_L by condition
+t = 0.1532, df = 167.78, p-value = 0.8784
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01060417  0.01238836
+sample estimates:
+mean in group punish mean in group reward 
+          0.04116262           0.04027052 
+
+
+	Welch Two Sample t-test
+
+data:  Dorsal_striatum_R by condition
+t = -0.012564, df = 167.99, p-value = 0.99
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01385070  0.01367553
+sample estimates:
+mean in group punish mean in group reward 
+          0.03835456           0.03844215 
+
+
+	Welch Two Sample t-test
+
+data:  Fusiform_gyrus_L by condition
+t = -0.69142, df = 167.23, p-value = 0.4903
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01715076  0.00825368
+sample estimates:
+mean in group punish mean in group reward 
+          0.03274377           0.03719231 
+
+
+	Welch Two Sample t-test
+
+data:  Fusiform_gyrus_R by condition
+t = -0.4783, df = 163.7, p-value = 0.6331
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01284785  0.00783731
+sample estimates:
+mean in group punish mean in group reward 
+          0.02108861           0.02359388 
+
+
+	Welch Two Sample t-test
+
+data:  Hippocampus_L by condition
+t = -1.3973, df = 155.35, p-value = 0.1643
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.018763718  0.003216188
+sample estimates:
+mean in group punish mean in group reward 
+          0.03089816           0.03867193 
+
+
+	Welch Two Sample t-test
+
+data:  Hippocampus_R by condition
+t = 0.69032, df = 155.59, p-value = 0.491
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.008118594  0.016841383
+sample estimates:
+mean in group punish mean in group reward 
+          0.03648009           0.03211869 
+
+
+	Welch Two Sample t-test
+
+data:  Insula_L by condition
+t = 0.5189, df = 163.98, p-value = 0.6045
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.009528382  0.016321724
+sample estimates:
+mean in group punish mean in group reward 
+          0.03875814           0.03536147 
+
+
+	Welch Two Sample t-test
+
+data:  Insula_R by condition
+t = -0.70855, df = 167.09, p-value = 0.4796
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.016710761  0.007883911
+sample estimates:
+mean in group punish mean in group reward 
+          0.02930825           0.03372167 
+
+
+	Welch Two Sample t-test
+
+data:  Intracalcarine_cortex_L by condition
+t = -1.415, df = 159.29, p-value = 0.159
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.021640508  0.003575014
+sample estimates:
+mean in group punish mean in group reward 
+          0.03058074           0.03961348 
+
+
+	Welch Two Sample t-test
+
+data:  Intracalcarine_cortex_R by condition
+t = -0.045844, df = 167.66, p-value = 0.9635
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01298964  0.01240006
+sample estimates:
+mean in group punish mean in group reward 
+          0.03817784           0.03847263 
+
+
+	Welch Two Sample t-test
+
+data:  lOFC_L by condition
+t = -0.062163, df = 167.4, p-value = 0.9505
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01241176  0.01165400
+sample estimates:
+mean in group punish mean in group reward 
+          0.02856919           0.02894807 
+
+
+	Welch Two Sample t-test
+
+data:  lOFC_R by condition
+t = -0.27984, df = 165.43, p-value = 0.7799
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01452098  0.01091574
+sample estimates:
+mean in group punish mean in group reward 
+          0.03033531           0.03213793 
+
+
+	Welch Two Sample t-test
+
+data:  mOFC_L by condition
+t = -0.12557, df = 167.9, p-value = 0.9002
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.009374948  0.008253702
+sample estimates:
+mean in group punish mean in group reward 
+          0.02219566           0.02275628 
+
+
+	Welch Two Sample t-test
+
+data:  mOFC_R by condition
+t = -0.40962, df = 167.21, p-value = 0.6826
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.014727712  0.009666384
+sample estimates:
+mean in group punish mean in group reward 
+          0.03223459           0.03476525 
+
+
+	Welch Two Sample t-test
+
+data:  Oral_somatosensory_cortex_R by condition
+t = 0.36787, df = 165.16, p-value = 0.7134
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.008437395  0.012301430
+sample estimates:
+mean in group punish mean in group reward 
+          0.03226129           0.03032927 
+
+
+	Welch Two Sample t-test
+
+data:  Oral_somatosensory_cortex_L by condition
+t = -0.77289, df = 159.09, p-value = 0.4407
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01529462  0.00669081
+sample estimates:
+mean in group punish mean in group reward 
+          0.03700900           0.04131091 
+
+
+	Welch Two Sample t-test
+
+data:  Precuneus_L by condition
+t = 0.30067, df = 167.2, p-value = 0.764
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.008885142  0.012077670
+sample estimates:
+mean in group punish mean in group reward 
+          0.01640319           0.01480692 
+
+
+	Welch Two Sample t-test
+
+data:  Precuneus_R by condition
+t = 0.89776, df = 159.13, p-value = 0.3707
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.007217483  0.019247571
+sample estimates:
+mean in group punish mean in group reward 
+          0.03321526           0.02720022 
+
+
+	Welch Two Sample t-test
+
+data:  Ventral_striatum_L by condition
+t = -0.8024, df = 158.35, p-value = 0.4235
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.018154067  0.007664765
+sample estimates:
+mean in group punish mean in group reward 
+          0.02675074           0.03199539 
+
+
+	Welch Two Sample t-test
+
+data:  Ventral_striatum_R by condition
+t = -0.94631, df = 151.57, p-value = 0.3455
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.015132384  0.005331105
+sample estimates:
+mean in group punish mean in group reward 
+          0.02330181           0.02820245 
+
+
+	Welch Two Sample t-test
+
+data:  vlPFC_L by condition
+t = 0.028555, df = 167.32, p-value = 0.9773
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01166634  0.01200876
+sample estimates:
+mean in group punish mean in group reward 
+          0.02709206           0.02692085 
+
+
+	Welch Two Sample t-test
+
+data:  vlPFC_R by condition
+t = 0.45943, df = 167.83, p-value = 0.6465
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.005574701  0.008956312
+sample estimates:
+mean in group punish mean in group reward 
+          0.01635241           0.01466161 
+
+
+	Welch Two Sample t-test
+
+data:  vlThalamus_L by condition
+t = 0.48626, df = 149.98, p-value = 0.6275
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.007110907  0.011753299
+sample estimates:
+mean in group punish mean in group reward 
+          0.02773266           0.02541147 
+
+
+	Welch Two Sample t-test
+
+data:  vlThalamus_R by condition
+t = 0.59658, df = 161.33, p-value = 0.5516
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.008012611  0.014949452
+sample estimates:
+mean in group punish mean in group reward 
+          0.03391893           0.03045051 
+
+
+	Welch Two Sample t-test
+
+data:  vmPFC_L by condition
+t = 0.82241, df = 163.53, p-value = 0.412
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.007814107  0.018969386
+sample estimates:
+mean in group punish mean in group reward 
+          0.03789513           0.03231749 
+
+
+	Welch Two Sample t-test
+
+data:  vmPFC_R by condition
+t = 1.2895, df = 154.78, p-value = 0.1991
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.003374169  0.016061986
+sample estimates:
+mean in group punish mean in group reward 
+          0.03480891           0.02846500 
+

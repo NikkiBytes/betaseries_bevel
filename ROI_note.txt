@@ -1,0 +1,7 @@
+#NOTE TO SELF
+
+When I make the betaseries ROI file, I mislabelled the oral_somatosensory_cortex_R as _L and vice versa. 
+
+Rather than repull the timeseries, I have labelled the columns to reflect the ROI location. 
+
+For all other ROIs, results are shown for L then R hemisphere. For oral_somat_cortex, results are R then L.

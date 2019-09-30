@@ -11,7 +11,7 @@ Insula_L	-36	2	4
 Insula_R	38	10	4
 Intracalcarine_cortex_L	-8	-79	7
 Intracalcarine_cortex_R	5	-78	7
-lOFC_R	-21	41	-20
+lOFC_L	-21	41	-20
 lOFC_R	24	32	-18
 mOFC_L	-31	19	-19
 mOFC_R	27	16	-17
