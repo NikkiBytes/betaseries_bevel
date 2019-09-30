@@ -5,8 +5,7 @@ library(plyr)
 library(lmer)
 library(reshape2)
 
-
-sink('/Users/jennygilbert/Documents/betaseries_bevel/5_analysis/results/node_analysis_output.txt')
+#sink('/Users/jennygilbert/Documents/betaseries_bevel/5_analysis/results/node_analysis_output.txt')
 
 df <- read.csv("/Users/jennygilbert/Documents/betaseries_bevel/5_analysis/results/node_metrics_by_sub.csv")
 names(df)
@@ -19,6 +18,11 @@ names(df_long)
 
 #Select Clustering
 df_clust <- df_long[which(df_long$metric == 'clustering'), ]
+describeBy(df_clust, df_clust$condition)
+t.test(module1 ~ condition, data = df_clust)
+t.test(module2 ~ condition, data = df_clust)
+t.test(module3 ~ condition, data = df_clust)
+t.test(module4 ~ condition, data = df_clust)
 
 t.test(Amygdala_L ~ condition, data = df_clust)
 t.test(Amygdala_R ~ condition, data = df_clust)
@@ -51,7 +55,12 @@ t.test(vmPFC_R ~ condition, data = df_clust)
 
 #Select Centrality
 df_cent <- df_long[which(df_long$metric == 'centrality'), ]
-describe(df_cent)
+describeBy(df_cent, df_cent$condition)
+t.test(module1 ~ condition, data = df_cent)
+t.test(module2 ~ condition, data = df_cent)
+t.test(module3 ~ condition, data = df_cent)
+t.test(module4 ~ condition, data = df_cent)
+
 
 t.test(Amygdala_L ~ condition, data = df_cent)
 t.test(Amygdala_L ~ condition, data = df_cent)
@@ -83,4 +92,8 @@ t.test(vlThalamus_R ~ condition, data = df_cent)
 t.test(vmPFC_L ~ condition, data = df_cent)
 t.test(vmPFC_R ~ condition, data = df_cent)
 
-sink()
+#sink()
+
+#Test module clustering and centrality
+
+df_long$module1 = (df_long$Amygdala_L + df_long$Amygdala_R + df_long$)
