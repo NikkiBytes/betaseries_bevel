@@ -53,6 +53,7 @@ df_pc <- df[which(df$metric == 'pc'), ]
 describeBy(df_pc, df_pc$condition)
 t.test(module0_mean ~ condition, data = df_pc)
 t.test(module1_mean ~ condition, data = df_pc)
+t.test(module2_mean ~ condition, data = df_pc)
 t.test(module3_mean ~ condition, data = df_pc)
 t.test(module4_mean ~ condition, data = df_pc)
 t.test(module5_mean ~ condition, data = df_pc)
@@ -63,6 +64,7 @@ df_cent <- df[which(df$metric == 'centrality'), ]
 describeBy(df_cent, df_cent$condition)
 t.test(module0_mean ~ condition, data = df_cent)
 t.test(module1_mean ~ condition, data = df_cent)
+t.test(module2_mean ~ condition, data = df_cent)
 t.test(module3_mean ~ condition, data = df_cent)
 t.test(module4_mean ~ condition, data = df_cent)
 t.test(module5_mean ~ condition, data = df_cent)
@@ -82,6 +84,74 @@ print(dat$ID)
 #Remove the blank lines added at the end (no clue why this happens)
 names(dat)
 
+#################################### SIGNIFICANT RESULTS####################################################################################
+#Clustering of Module 1 in reward is related to Sweetness of Reward
+res.aov <- aov(module1_clustering_reward ~ sweetstim_level, data = dat)
+summary(res.aov)
+describeBy(dat$module1_clustering_reward, dat$sweetstim_level)
+
+#Centrality of Module 2 in punishment is related to Bitterness of Punishment
+res.aov <- aov(module2_centrality_punish ~ bitterstim_level, data = dat)
+summary(res.aov)
+describeBy(dat$module2_centrality_punish, dat$bitterstim_level)
+
+#Clustering of Module 2,3,5,6 in reward is related to Desire for Reward
+cor.test(dat$module2_clustering_reward, dat$sweetstim_desire)
+cor.test(dat$module3_clustering_reward, dat$sweetstim_desire)
+cor.test(dat$module5_clustering_reward, dat$sweetstim_desire)
+cor.test(dat$module6_clustering_reward, dat$sweetstim_desire)
+
+################################################## PLOTTING #################################################################################### 
+data_summary <- function(data, varname, groupnames){
+  require(plyr)
+  summary_func <- function(x, col){
+    c(mean = mean(x[[col]], na.rm=TRUE),
+      sd = sd(x[[col]], na.rm=TRUE))
+  }
+  data_sum<-ddply(data, groupnames, .fun=summary_func,
+                  varname)
+  data_sum <- rename(data_sum, c("mean" = varname))
+  return(data_sum)
+}
+df2 <- data_summary(dat, varname="module2_centrality_punish", 
+                    groupnames=c("bitterstim_level"))
+
+p<- ggplot(df2, aes(x=bitterstim_level, y=module2_centrality_punish)) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=module2_centrality_punish-sd, ymax=module2_centrality_punish+sd), width=.2,
+                position=position_dodge(.9)) 
+p+labs(title="Module 3 Betweenness Centrality related to Bitterness", x="Punishment Bitterness", y = "Betweenness Centrality")+
+  theme_classic()
+
+
+df3 <- data_summary(dat, varname="module1_clustering_reward", 
+                    groupnames=c("sweetstim_level"))
+
+p<- ggplot(df3, aes(x=sweetstim_level, y=module1_clustering_reward)) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=module1_clustering_reward-sd, ymax=module1_clustering_reward+sd), width=.2,
+                position=position_dodge(.9)) 
+p+labs(title="Module 2 Clustering Coefficient related to Sweetness", x="Reward Sweetness", y = "Clustering Coefficient")+
+  theme_classic()
+
+
+plot(dat$module2_clustering_reward, dat$sweetstim_desire, col = "deeppink3", 
+     xlab="Clustering Coefficient", ylab="Desire to Consume Reward", xlim=c(.6, 1),
+     cex.main=1.0, cex.lab=1.0, cex.axis=1.0)
+points(dat$module3_clustering_reward, dat$sweetstim_desire, col= "orange")
+points(dat$module4_clustering_reward, dat$sweetstim_desire, col= "chartreuse3")
+points(dat$module6_clustering_reward, dat$sweetstim_desire, col="mediumorchid4")
+abline(lm(dat$sweetstim_desire ~dat$module2_clustering_reward), col = "deeppink3")
+abline(lm(dat$sweetstim_desire ~dat$module3_clustering_reward), col = "orange")
+abline(lm(dat$sweetstim_desire ~dat$module5_clustering_reward), col = "chartreuse3")
+abline(lm(dat$sweetstim_desire ~dat$module6_clustering_reward), col = "mediumorchid4")
+legend("topleft", inset=.05, title="Module",
+       c("3","4","6","7"), fill=c('deeppink3', "orange", "chartreuse3", "mediumorchid4"))
+
+
+################################################## NON SIGNIFICANT #################################################################################### 
 ##Relation to Posttest Performance 
 #Reward
 #Clustering
@@ -143,7 +213,6 @@ cor.test(dat$module6_pc_punish, dat$sensitivity_punish)
 # There are no significant associations of module clusting (segregation), participation coefficient (integration), 
 #or betweenness centrality (hubness) during reward and punishment with posttest performance. 
 
-
 ##Relation to the beverage selected
 #Reward
 #Clustering
@@ -151,8 +220,6 @@ res.aov <- aov(module0_clustering_reward ~ sweetstim_level, data = dat)
 summary(res.aov)
 res.aov <- aov(module1_clustering_reward ~ sweetstim_level, data = dat)
 summary(res.aov)
-describeBy(dat$module1_clustering_reward, dat$sweetstim_level)
-
 res.aov <- aov(module2_clustering_reward ~ sweetstim_level, data = dat)
 summary(res.aov)
 res.aov <- aov(module3_clustering_reward ~ sweetstim_level, data = dat)
@@ -331,7 +398,7 @@ cor.test(dat$module4_pc_reward, dat$sweetstim_pleasent)
 cor.test(dat$module5_pc_reward, dat$sweetstim_pleasent)
 cor.test(dat$module6_pc_reward, dat$sweetstim_pleasent)
 
-##Relation to Liking
+##Relation to Desire
 #Reward
 #Clustering
 cor.test(dat$module0_clustering_reward, dat$sweetstim_desire)
@@ -359,3 +426,201 @@ cor.test(dat$module3_pc_reward, dat$sweetstim_desire)
 cor.test(dat$module4_pc_reward, dat$sweetstim_desire)
 cor.test(dat$module5_pc_reward, dat$sweetstim_desire)
 cor.test(dat$module6_pc_reward, dat$sweetstim_desire)
+
+##Relation to percent_matched_outcome
+#Reward
+#Clustering
+cor.test(dat$module0_clustering_reward, dat$percent_matched_outcome)
+cor.test(dat$module1_clustering_reward, dat$percent_matched_outcome)
+cor.test(dat$module2_clustering_reward, dat$percent_matched_outcome)
+cor.test(dat$module3_clustering_reward, dat$percent_matched_outcome)
+cor.test(dat$module4_clustering_reward, dat$percent_matched_outcome)
+cor.test(dat$module5_clustering_reward, dat$percent_matched_outcome)
+cor.test(dat$module6_clustering_reward, dat$percent_matched_outcome)
+
+#Centrality
+cor.test(dat$module0_centrality_reward, dat$percent_matched_outcome)
+cor.test(dat$module1_centrality_reward, dat$percent_matched_outcome)
+cor.test(dat$module2_centrality_reward, dat$percent_matched_outcome)
+cor.test(dat$module3_centrality_reward, dat$percent_matched_outcome)
+cor.test(dat$module4_centrality_reward, dat$percent_matched_outcome)
+cor.test(dat$module5_centrality_reward, dat$percent_matched_outcome)
+cor.test(dat$module6_centrality_reward, dat$percent_matched_outcome)
+
+#PC
+cor.test(dat$module0_pc_reward, dat$percent_matched_outcome)
+cor.test(dat$module1_pc_reward, dat$percent_matched_outcome)
+cor.test(dat$module2_pc_reward, dat$percent_matched_outcome)
+cor.test(dat$module3_pc_reward, dat$percent_matched_outcome)
+cor.test(dat$module4_pc_reward, dat$percent_matched_outcome)
+cor.test(dat$module5_pc_reward, dat$percent_matched_outcome)
+cor.test(dat$module6_pc_reward, dat$percent_matched_outcome)
+
+#Punishment
+#Clustering
+cor.test(dat$module0_clustering_punish, dat$percent_matched_outcome)
+cor.test(dat$module1_clustering_punish, dat$percent_matched_outcome)
+cor.test(dat$module2_clustering_punish, dat$percent_matched_outcome)
+cor.test(dat$module3_clustering_punish, dat$percent_matched_outcome)
+cor.test(dat$module4_clustering_punish, dat$percent_matched_outcome)
+cor.test(dat$module5_clustering_punish, dat$percent_matched_outcome)
+cor.test(dat$module6_clustering_punish, dat$percent_matched_outcome)
+
+#Centrality
+cor.test(dat$module0_centrality_punish, dat$percent_matched_outcome)
+cor.test(dat$module1_centrality_punish, dat$percent_matched_outcome)
+cor.test(dat$module2_centrality_punish, dat$percent_matched_outcome)
+cor.test(dat$module3_centrality_punish, dat$percent_matched_outcome)
+cor.test(dat$module4_centrality_punish, dat$percent_matched_outcome)
+cor.test(dat$module5_centrality_punish, dat$percent_matched_outcome)
+cor.test(dat$module6_centrality_punish, dat$percent_matched_outcome)
+
+#PC
+cor.test(dat$module0_pc_punish, dat$percent_matched_outcome)
+cor.test(dat$module1_pc_punish, dat$percent_matched_outcome)
+cor.test(dat$module2_pc_punish, dat$percent_matched_outcome)
+cor.test(dat$module3_pc_punish, dat$percent_matched_outcome)
+cor.test(dat$module4_pc_punish, dat$percent_matched_outcome)
+cor.test(dat$module5_pc_punish, dat$percent_matched_outcome)
+cor.test(dat$module6_pc_punish, dat$percent_matched_outcome)
+
+################################################## CHOICE #################################################################################### 
+cor.test(dat$module0_clustering_choice, dat$percent_matched_outcome)
+cor.test(dat$module1_clustering_choice, dat$percent_matched_outcome)
+cor.test(dat$module2_clustering_choice, dat$percent_matched_outcome)
+cor.test(dat$module3_clustering_choice, dat$percent_matched_outcome)
+cor.test(dat$module4_clustering_choice, dat$percent_matched_outcome)
+cor.test(dat$module5_clustering_choice, dat$percent_matched_outcome)
+cor.test(dat$module6_clustering_choice, dat$percent_matched_outcome)
+cor.test(dat$module7_clustering_choice, dat$percent_matched_outcome)
+
+cor.test(dat$module0_centrality_choice, dat$percent_matched_outcome)
+cor.test(dat$module1_centrality_choice, dat$percent_matched_outcome)
+cor.test(dat$module2_centrality_choice, dat$percent_matched_outcome)
+cor.test(dat$module3_centrality_choice, dat$percent_matched_outcome)
+cor.test(dat$module4_centrality_choice, dat$percent_matched_outcome)
+cor.test(dat$module5_centrality_choice, dat$percent_matched_outcome)
+cor.test(dat$module6_centrality_choice, dat$percent_matched_outcome)
+cor.test(dat$module7_centrality_choice, dat$percent_matched_outcome)
+
+cor.test(dat$module0_pc_choice, dat$percent_matched_outcome)
+cor.test(dat$module1_pc_choice, dat$percent_matched_outcome)
+cor.test(dat$module2_pc_choice, dat$percent_matched_outcome)
+cor.test(dat$module3_pc_choice, dat$percent_matched_outcome)
+cor.test(dat$module4_pc_choice, dat$percent_matched_outcome)
+cor.test(dat$module5_pc_choice, dat$percent_matched_outcome)
+cor.test(dat$module6_pc_choice, dat$percent_matched_outcome)
+cor.test(dat$module7_pc_choice, dat$percent_matched_outcome)
+
+#Sensitivity to Reward
+cor.test(dat$module0_clustering_choice, dat$sensitivity_reward)
+cor.test(dat$module1_clustering_choice, dat$sensitivity_reward)
+cor.test(dat$module2_clustering_choice, dat$sensitivity_reward)
+cor.test(dat$module3_clustering_choice, dat$sensitivity_reward)
+cor.test(dat$module4_clustering_choice, dat$sensitivity_reward)
+cor.test(dat$module5_clustering_choice, dat$sensitivity_reward)
+cor.test(dat$module6_clustering_choice, dat$sensitivity_reward)
+cor.test(dat$module7_clustering_choice, dat$sensitivity_reward)
+
+cor.test(dat$module0_centrality_choice, dat$sensitivity_reward)
+cor.test(dat$module1_centrality_choice, dat$sensitivity_reward)
+cor.test(dat$module2_centrality_choice, dat$sensitivity_reward)
+cor.test(dat$module3_centrality_choice, dat$sensitivity_reward)
+cor.test(dat$module4_centrality_choice, dat$sensitivity_reward)
+cor.test(dat$module5_centrality_choice, dat$sensitivity_reward)
+cor.test(dat$module6_centrality_choice, dat$sensitivity_reward)
+cor.test(dat$module7_centrality_choice, dat$sensitivity_reward)
+
+cor.test(dat$module0_pc_choice, dat$sensitivity_reward)
+cor.test(dat$module1_pc_choice, dat$sensitivity_reward)
+cor.test(dat$module2_pc_choice, dat$sensitivity_reward)
+cor.test(dat$module3_pc_choice, dat$sensitivity_reward)
+cor.test(dat$module4_pc_choice, dat$sensitivity_reward)
+cor.test(dat$module5_pc_choice, dat$sensitivity_reward)
+cor.test(dat$module6_pc_choice, dat$sensitivity_reward)
+cor.test(dat$module7_pc_choice, dat$sensitivity_reward)
+
+#Sensitivity to punishment
+cor.test(dat$module0_clustering_choice, dat$sensitivity_punish)
+cor.test(dat$module1_clustering_choice, dat$sensitivity_punish)
+cor.test(dat$module2_clustering_choice, dat$sensitivity_punish)
+cor.test(dat$module3_clustering_choice, dat$sensitivity_punish)
+cor.test(dat$module4_clustering_choice, dat$sensitivity_punish)
+cor.test(dat$module5_clustering_choice, dat$sensitivity_punish)
+cor.test(dat$module6_clustering_choice, dat$sensitivity_punish)
+cor.test(dat$module7_clustering_choice, dat$sensitivity_punish)
+
+cor.test(dat$module0_centrality_choice, dat$sensitivity_punish)
+cor.test(dat$module1_centrality_choice, dat$sensitivity_punish)
+cor.test(dat$module2_centrality_choice, dat$sensitivity_punish)
+cor.test(dat$module3_centrality_choice, dat$sensitivity_punish)
+cor.test(dat$module4_centrality_choice, dat$sensitivity_punish)
+cor.test(dat$module5_centrality_choice, dat$sensitivity_punish)
+cor.test(dat$module6_centrality_choice, dat$sensitivity_punish)
+cor.test(dat$module7_centrality_choice, dat$sensitivity_punish)
+
+cor.test(dat$module0_pc_choice, dat$sensitivity_punish)
+cor.test(dat$module1_pc_choice, dat$sensitivity_punish)
+cor.test(dat$module2_pc_choice, dat$sensitivity_punish)
+cor.test(dat$module3_pc_choice, dat$sensitivity_punish)
+cor.test(dat$module4_pc_choice, dat$sensitivity_punish)
+cor.test(dat$module5_pc_choice, dat$sensitivity_punish)
+cor.test(dat$module6_pc_choice, dat$sensitivity_punish)
+cor.test(dat$module7_pc_choice, dat$sensitivity_punish)
+
+#NBack Accuracy
+cor.test(dat$module0_clustering_choice, dat$nback_accuracy)
+cor.test(dat$module1_clustering_choice, dat$nback_accuracy)
+cor.test(dat$module2_clustering_choice, dat$nback_accuracy)
+cor.test(dat$module3_clustering_choice, dat$nback_accuracy)
+cor.test(dat$module4_clustering_choice, dat$nback_accuracy)
+cor.test(dat$module5_clustering_choice, dat$nback_accuracy)
+cor.test(dat$module6_clustering_choice, dat$nback_accuracy)
+cor.test(dat$module7_clustering_choice, dat$nback_accuracy)
+
+cor.test(dat$module0_centrality_choice, dat$nback_accuracy)
+cor.test(dat$module1_centrality_choice, dat$nback_accuracy)
+cor.test(dat$module2_centrality_choice, dat$nback_accuracy)
+cor.test(dat$module3_centrality_choice, dat$nback_accuracy)
+cor.test(dat$module4_centrality_choice, dat$nback_accuracy)
+cor.test(dat$module5_centrality_choice, dat$nback_accuracy)
+cor.test(dat$module6_centrality_choice, dat$nback_accuracy)
+cor.test(dat$module7_centrality_choice, dat$nback_accuracy)
+
+cor.test(dat$module0_pc_choice, dat$nback_accuracy)
+cor.test(dat$module1_pc_choice, dat$nback_accuracy)
+cor.test(dat$module2_pc_choice, dat$nback_accuracy)
+cor.test(dat$module3_pc_choice, dat$nback_accuracy)
+cor.test(dat$module4_pc_choice, dat$nback_accuracy)
+cor.test(dat$module5_pc_choice, dat$nback_accuracy)
+cor.test(dat$module6_pc_choice, dat$nback_accuracy)
+cor.test(dat$module7_pc_choice, dat$nback_accuracy)
+
+#BMI
+cor.test(dat$module0_clustering_choice, dat$BMI)
+cor.test(dat$module1_clustering_choice, dat$BMI)
+cor.test(dat$module2_clustering_choice, dat$BMI)
+cor.test(dat$module3_clustering_choice, dat$BMI)
+cor.test(dat$module4_clustering_choice, dat$BMI)
+cor.test(dat$module5_clustering_choice, dat$BMI)
+cor.test(dat$module6_clustering_choice, dat$BMI)
+cor.test(dat$module7_clustering_choice, dat$BMI)
+
+cor.test(dat$module0_centrality_choice, dat$BMI)
+cor.test(dat$module1_centrality_choice, dat$BMI)
+cor.test(dat$module2_centrality_choice, dat$BMI)
+cor.test(dat$module3_centrality_choice, dat$BMI)
+cor.test(dat$module4_centrality_choice, dat$BMI)
+cor.test(dat$module5_centrality_choice, dat$BMI)
+cor.test(dat$module6_centrality_choice, dat$BMI)
+cor.test(dat$module7_centrality_choice, dat$BMI)
+
+cor.test(dat$module0_pc_choice, dat$BMI)
+cor.test(dat$module1_pc_choice, dat$BMI)
+cor.test(dat$module2_pc_choice, dat$BMI)
+cor.test(dat$module3_pc_choice, dat$BMI)
+cor.test(dat$module4_pc_choice, dat$BMI)
+cor.test(dat$module5_pc_choice, dat$BMI)
+cor.test(dat$module6_pc_choice, dat$BMI)
+cor.test(dat$module7_pc_choice, dat$BMI)
+
