@@ -52,7 +52,7 @@ t.test(module6_mean ~ condition, data = df_clust)
 df_pc <- df[which(df$metric == 'pc'), ]
 describeBy(df_pc, df_pc$condition)
 t.test(module0_mean ~ condition, data = df_pc)
-t.test(module1_mean ~ condition, data = df_pc)
+t.test(module1_mean ~ condition, data = df_pc) #significantly different betwene reward and punishment
 t.test(module2_mean ~ condition, data = df_pc)
 t.test(module3_mean ~ condition, data = df_pc)
 t.test(module4_mean ~ condition, data = df_pc)
@@ -84,72 +84,6 @@ print(dat$ID)
 #Remove the blank lines added at the end (no clue why this happens)
 names(dat)
 
-#################################### SIGNIFICANT RESULTS####################################################################################
-#Clustering of Module 1 in reward is related to Sweetness of Reward
-res.aov <- aov(module1_clustering_reward ~ sweetstim_level, data = dat)
-summary(res.aov)
-describeBy(dat$module1_clustering_reward, dat$sweetstim_level)
-
-#Centrality of Module 2 in punishment is related to Bitterness of Punishment
-res.aov <- aov(module2_centrality_punish ~ bitterstim_level, data = dat)
-summary(res.aov)
-describeBy(dat$module2_centrality_punish, dat$bitterstim_level)
-
-#Clustering of Module 2,3,5,6 in reward is related to Desire for Reward
-cor.test(dat$module2_clustering_reward, dat$sweetstim_desire)
-cor.test(dat$module3_clustering_reward, dat$sweetstim_desire)
-cor.test(dat$module5_clustering_reward, dat$sweetstim_desire)
-cor.test(dat$module6_clustering_reward, dat$sweetstim_desire)
-
-################################################## PLOTTING #################################################################################### 
-data_summary <- function(data, varname, groupnames){
-  require(plyr)
-  summary_func <- function(x, col){
-    c(mean = mean(x[[col]], na.rm=TRUE),
-      sd = sd(x[[col]], na.rm=TRUE))
-  }
-  data_sum<-ddply(data, groupnames, .fun=summary_func,
-                  varname)
-  data_sum <- rename(data_sum, c("mean" = varname))
-  return(data_sum)
-}
-df2 <- data_summary(dat, varname="module2_centrality_punish", 
-                    groupnames=c("bitterstim_level"))
-
-p<- ggplot(df2, aes(x=bitterstim_level, y=module2_centrality_punish)) + 
-  geom_bar(stat="identity", color="black", 
-           position=position_dodge()) +
-  geom_errorbar(aes(ymin=module2_centrality_punish-sd, ymax=module2_centrality_punish+sd), width=.2,
-                position=position_dodge(.9)) 
-p+labs(title="Module 3 Betweenness Centrality related to Bitterness", x="Punishment Bitterness", y = "Betweenness Centrality")+
-  theme_classic()
-
-
-df3 <- data_summary(dat, varname="module1_clustering_reward", 
-                    groupnames=c("sweetstim_level"))
-
-p<- ggplot(df3, aes(x=sweetstim_level, y=module1_clustering_reward)) + 
-  geom_bar(stat="identity", color="black", 
-           position=position_dodge()) +
-  geom_errorbar(aes(ymin=module1_clustering_reward-sd, ymax=module1_clustering_reward+sd), width=.2,
-                position=position_dodge(.9)) 
-p+labs(title="Module 2 Clustering Coefficient related to Sweetness", x="Reward Sweetness", y = "Clustering Coefficient")+
-  theme_classic()
-
-
-plot(dat$module2_clustering_reward, dat$sweetstim_desire, col = "deeppink3", 
-     xlab="Clustering Coefficient", ylab="Desire to Consume Reward", xlim=c(.6, 1),
-     cex.main=1.0, cex.lab=1.0, cex.axis=1.0)
-points(dat$module3_clustering_reward, dat$sweetstim_desire, col= "orange")
-points(dat$module4_clustering_reward, dat$sweetstim_desire, col= "chartreuse3")
-points(dat$module6_clustering_reward, dat$sweetstim_desire, col="mediumorchid4")
-abline(lm(dat$sweetstim_desire ~dat$module2_clustering_reward), col = "deeppink3")
-abline(lm(dat$sweetstim_desire ~dat$module3_clustering_reward), col = "orange")
-abline(lm(dat$sweetstim_desire ~dat$module5_clustering_reward), col = "chartreuse3")
-abline(lm(dat$sweetstim_desire ~dat$module6_clustering_reward), col = "mediumorchid4")
-legend("topleft", inset=.05, title="Module",
-       c("3","4","6","7"), fill=c('deeppink3', "orange", "chartreuse3", "mediumorchid4"))
-
 
 ################################################## NON SIGNIFICANT #################################################################################### 
 ##Relation to Posttest Performance 
@@ -162,6 +96,7 @@ cor.test(dat$module3_clustering_reward, dat$sensitivity_reward)
 cor.test(dat$module4_clustering_reward, dat$sensitivity_reward)
 cor.test(dat$module5_clustering_reward, dat$sensitivity_reward)
 cor.test(dat$module6_clustering_reward, dat$sensitivity_reward)
+cor.test(dat$module7_clustering_reward, dat$sensitivity_reward)
 
 #Centrality
 cor.test(dat$module0_centrality_reward, dat$sensitivity_reward)
@@ -171,6 +106,7 @@ cor.test(dat$module3_centrality_reward, dat$sensitivity_reward)
 cor.test(dat$module4_centrality_reward, dat$sensitivity_reward)
 cor.test(dat$module5_centrality_reward, dat$sensitivity_reward)
 cor.test(dat$module6_centrality_reward, dat$sensitivity_reward)
+cor.test(dat$module7_centrality_reward, dat$sensitivity_reward)
 
 #PC
 cor.test(dat$module0_pc_reward, dat$sensitivity_reward)
@@ -180,6 +116,7 @@ cor.test(dat$module3_pc_reward, dat$sensitivity_reward)
 cor.test(dat$module4_pc_reward, dat$sensitivity_reward)
 cor.test(dat$module5_pc_reward, dat$sensitivity_reward)
 cor.test(dat$module6_pc_reward, dat$sensitivity_reward)
+cor.test(dat$module7_pc_reward, dat$sensitivity_reward)
 
 #Punishment
 #Clustering
@@ -230,6 +167,8 @@ res.aov <- aov(module5_clustering_reward ~ sweetstim_level, data = dat)
 summary(res.aov)
 res.aov <- aov(module6_clustering_reward ~ sweetstim_level, data = dat)
 summary(res.aov)
+res.aov <- aov(module7_clustering_reward ~ sweetstim_level, data = dat)
+summary(res.aov)
 
 #Centrality
 res.aov <- aov(module0_centrality_reward ~ sweetstim_level, data = dat)
@@ -246,6 +185,8 @@ res.aov <- aov(module5_centrality_reward ~ sweetstim_level, data = dat)
 summary(res.aov)
 res.aov <- aov(module6_centrality_reward ~ sweetstim_level, data = dat)
 summary(res.aov)
+res.aov <- aov(module7_centrality_reward ~ sweetstim_level, data = dat)
+summary(res.aov)
 
 #PC
 res.aov <- aov(module0_pc_reward ~ sweetstim_level, data = dat)
@@ -261,6 +202,8 @@ summary(res.aov)
 res.aov <- aov(module5_pc_reward ~ sweetstim_level, data = dat)
 summary(res.aov)
 res.aov <- aov(module6_pc_reward ~ sweetstim_level, data = dat)
+summary(res.aov)
+res.aov <- aov(module7_pc_reward ~ sweetstim_level, data = dat)
 summary(res.aov)
 
 #punish
@@ -322,6 +265,7 @@ cor.test(dat$module3_clustering_reward, dat$BMI)
 cor.test(dat$module4_clustering_reward, dat$BMI)
 cor.test(dat$module5_clustering_reward, dat$BMI)
 cor.test(dat$module6_clustering_reward, dat$BMI)
+cor.test(dat$module7_clustering_reward, dat$BMI)
 
 #Centrality
 cor.test(dat$module0_centrality_reward, dat$BMI)
@@ -331,6 +275,7 @@ cor.test(dat$module3_centrality_reward, dat$BMI)
 cor.test(dat$module4_centrality_reward, dat$BMI)
 cor.test(dat$module5_centrality_reward, dat$BMI)
 cor.test(dat$module6_centrality_reward, dat$BMI)
+cor.test(dat$module7_centrality_reward, dat$BMI)
 
 #PC
 cor.test(dat$module0_pc_reward, dat$BMI)
@@ -340,6 +285,7 @@ cor.test(dat$module3_pc_reward, dat$BMI)
 cor.test(dat$module4_pc_reward, dat$BMI)
 cor.test(dat$module5_pc_reward, dat$BMI)
 cor.test(dat$module6_pc_reward, dat$BMI)
+cor.test(dat$module7_pc_reward, dat$BMI)
 
 #Punishment
 #Clustering
@@ -379,6 +325,7 @@ cor.test(dat$module3_clustering_reward, dat$sweetstim_pleasent)
 cor.test(dat$module4_clustering_reward, dat$sweetstim_pleasent)
 cor.test(dat$module5_clustering_reward, dat$sweetstim_pleasent)
 cor.test(dat$module6_clustering_reward, dat$sweetstim_pleasent)
+cor.test(dat$module7_clustering_reward, dat$sweetstim_pleasent)
 
 #Centrality
 cor.test(dat$module0_centrality_reward, dat$sweetstim_pleasent)
@@ -388,6 +335,7 @@ cor.test(dat$module3_centrality_reward, dat$sweetstim_pleasent)
 cor.test(dat$module4_centrality_reward, dat$sweetstim_pleasent)
 cor.test(dat$module5_centrality_reward, dat$sweetstim_pleasent)
 cor.test(dat$module6_centrality_reward, dat$sweetstim_pleasent)
+cor.test(dat$module7_centrality_reward, dat$sweetstim_pleasent)
 
 #PC
 cor.test(dat$module0_pc_reward, dat$sweetstim_pleasent)
@@ -397,6 +345,7 @@ cor.test(dat$module3_pc_reward, dat$sweetstim_pleasent)
 cor.test(dat$module4_pc_reward, dat$sweetstim_pleasent)
 cor.test(dat$module5_pc_reward, dat$sweetstim_pleasent)
 cor.test(dat$module6_pc_reward, dat$sweetstim_pleasent)
+cor.test(dat$module7_pc_reward, dat$sweetstim_pleasent)
 
 ##Relation to Desire
 #Reward
@@ -408,6 +357,7 @@ cor.test(dat$module3_clustering_reward, dat$sweetstim_desire)
 cor.test(dat$module4_clustering_reward, dat$sweetstim_desire)
 cor.test(dat$module5_clustering_reward, dat$sweetstim_desire)
 cor.test(dat$module6_clustering_reward, dat$sweetstim_desire)
+cor.test(dat$module7_clustering_reward, dat$sweetstim_desire)
 
 #Centrality
 cor.test(dat$module0_centrality_reward, dat$sweetstim_desire)
@@ -417,6 +367,7 @@ cor.test(dat$module3_centrality_reward, dat$sweetstim_desire)
 cor.test(dat$module4_centrality_reward, dat$sweetstim_desire)
 cor.test(dat$module5_centrality_reward, dat$sweetstim_desire)
 cor.test(dat$module6_centrality_reward, dat$sweetstim_desire)
+cor.test(dat$module7_centrality_reward, dat$sweetstim_desire)
 
 #PC
 cor.test(dat$module0_pc_reward, dat$sweetstim_desire)
@@ -426,6 +377,7 @@ cor.test(dat$module3_pc_reward, dat$sweetstim_desire)
 cor.test(dat$module4_pc_reward, dat$sweetstim_desire)
 cor.test(dat$module5_pc_reward, dat$sweetstim_desire)
 cor.test(dat$module6_pc_reward, dat$sweetstim_desire)
+cor.test(dat$module7_pc_reward, dat$sweetstim_desire)
 
 ##Relation to percent_matched_outcome
 #Reward
@@ -437,7 +389,7 @@ cor.test(dat$module3_clustering_reward, dat$percent_matched_outcome)
 cor.test(dat$module4_clustering_reward, dat$percent_matched_outcome)
 cor.test(dat$module5_clustering_reward, dat$percent_matched_outcome)
 cor.test(dat$module6_clustering_reward, dat$percent_matched_outcome)
-
+cor.test(dat$module7_clustering_reward, dat$percent_matched_outcome)
 #Centrality
 cor.test(dat$module0_centrality_reward, dat$percent_matched_outcome)
 cor.test(dat$module1_centrality_reward, dat$percent_matched_outcome)
@@ -446,7 +398,7 @@ cor.test(dat$module3_centrality_reward, dat$percent_matched_outcome)
 cor.test(dat$module4_centrality_reward, dat$percent_matched_outcome)
 cor.test(dat$module5_centrality_reward, dat$percent_matched_outcome)
 cor.test(dat$module6_centrality_reward, dat$percent_matched_outcome)
-
+cor.test(dat$module7_centrality_reward, dat$percent_matched_outcome)
 #PC
 cor.test(dat$module0_pc_reward, dat$percent_matched_outcome)
 cor.test(dat$module1_pc_reward, dat$percent_matched_outcome)
@@ -455,7 +407,7 @@ cor.test(dat$module3_pc_reward, dat$percent_matched_outcome)
 cor.test(dat$module4_pc_reward, dat$percent_matched_outcome)
 cor.test(dat$module5_pc_reward, dat$percent_matched_outcome)
 cor.test(dat$module6_pc_reward, dat$percent_matched_outcome)
-
+cor.test(dat$module7_pc_reward, dat$percent_matched_outcome)
 #Punishment
 #Clustering
 cor.test(dat$module0_clustering_punish, dat$percent_matched_outcome)
@@ -541,7 +493,7 @@ cor.test(dat$module6_pc_choice, dat$sensitivity_reward)
 cor.test(dat$module7_pc_choice, dat$sensitivity_reward)
 
 #Sensitivity to punishment
-cor.test(dat$module0_clustering_choice, dat$sensitivity_punish)
+cor.test(dat$module0_clustering_choice, dat$sensitivity_punish) #*signifiant 
 cor.test(dat$module1_clustering_choice, dat$sensitivity_punish)
 cor.test(dat$module2_clustering_choice, dat$sensitivity_punish)
 cor.test(dat$module3_clustering_choice, dat$sensitivity_punish)
@@ -623,4 +575,59 @@ cor.test(dat$module4_pc_choice, dat$BMI)
 cor.test(dat$module5_pc_choice, dat$BMI)
 cor.test(dat$module6_pc_choice, dat$BMI)
 cor.test(dat$module7_pc_choice, dat$BMI)
+
+
+################################################## PLOTTING #################################################################################### 
+plot(dat$module0_clustering_choice, dat$sensitivity_punish, col = "black", 
+     xlab="Clustering Coefficient of Choice Module 1", ylab="Sensitivity to Punishment", xlim=c(.6, 1),
+     cex.main=1.0, cex.lab=1.0, cex.axis=1.0)
+abline(lm(dat$sensitivity_punish ~dat$module0_clustering_choice), col = "deeppink3")
+
+
+
+### OLD
+data_summary <- function(data, varname, groupnames){
+  require(plyr)
+  summary_func <- function(x, col){
+    c(mean = mean(x[[col]], na.rm=TRUE),
+      sd = sd(x[[col]], na.rm=TRUE))
+  }
+  data_sum<-ddply(data, groupnames, .fun=summary_func,
+                  varname)
+  data_sum <- rename(data_sum, c("mean" = varname))
+  return(data_sum)
+}
+df2 <- data_summary(df_pc, varname="module1_mean", 
+                    groupnames=c("condition"))
+
+p <- ggplot(df2, aes(x=condition, y=module1_mean)) + 
+  geom_bar(stat="identity", color="black", position=position_dodge()) +
+  geom_errorbar(aes(ymin= module1_mean -sd, ymax=module1_mean + sd), width=.2, position=position_dodge(.9))
+
+p+labs(title="Module 2 Participation Coefficient in Reward and Punishment", x="Reinforcer", y = "Module 2 PC")+
+  theme_classic()
+
+
+df3 <- data_summary(dat, varname="module1_clustering_reward", 
+                    groupnames=c("sweetstim_level"))
+
+p<- ggplot(df3, aes(x=sweetstim_level, y=module1_clustering_reward)) + 
+  geom_bar(stat="identity", color="black", 
+           position=position_dodge()) +
+  geom_errorbar(aes(ymin=module1_clustering_reward-sd, ymax=module1_clustering_reward+sd), width=.2,
+                position=position_dodge(.9)) 
+p+labs(title="Module 2 Clustering Coefficient related to Sweetness", x="Reward Sweetness", y = "Clustering Coefficient")+
+  theme_classic()
+
+
+plot(dat$module0_clustering_choice, dat$sensitivity_punish, col = "black", 
+     xlab="Clustering Coefficient of Choice Module 1", ylab="Sensitivity to Punishment", xlim=c(.6, 1),
+     cex.main=1.0, cex.lab=1.0, cex.axis=1.0)
+abline(lm(dat$sensitivity_punish ~dat$module0_clustering_choice), col = "deeppink3")
+#abline(lm(dat$sweetstim_desire ~dat$module3_clustering_reward), col = "orange")
+#abline(lm(dat$sweetstim_desire ~dat$module5_clustering_reward), col = "chartreuse3")
+#abline(lm(dat$sweetstim_desire ~dat$module6_clustering_reward), col = "mediumorchid4")
+#legend("topleft", inset=.05, title="Module",
+#       c("3","4","6","7"), fill=c('deeppink3', "orange", "chartreuse3", "mediumorchid4"))
+
 

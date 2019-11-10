@@ -1,0 +1,15 @@
+#NOTE TO SELF
+
+Choice was associated with ROIs assigned two communities (4 and 5) that were the same as reward & punishment BUT community number was flipped. 
+
+Choice 
+	- Insula and Thalamus (Community 4)
+	- Lateral OFC (Community 5)
+
+Reward and Punishment
+ 	- Insula and Thalamus (Community 5)
+	- Lateral OFC (Community 4)
+
+SINCE COMMUNITY NUMBER is not ordinal in any way -- these results were flipped
+
+IN THE PAPER, I reversed these communities during choice
