@@ -3,7 +3,7 @@ Amygdala_L	-20	-2	-22
 Amygdala_R	20	-2	-23
 Dorsal_striatum_L	-12	17	-4
 Dorsal_striatum_R	13	17	-5
-Fusiform_gyrus_L	-33	-37	-16
+Fusiform_gyrus_L	-33	-60	-16
 Fusiform_gyrus_R	27	-60	-8
 Hippocampus_L	-26	-12	-22
 Hippocampus_R	25	-11	-23
