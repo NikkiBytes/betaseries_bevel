@@ -36,6 +36,8 @@ df<- temp[c("module0_mean", "module1_mean", "module2_mean", "module3_mean", "mod
 df[df < 0] <- NA
 describe(df)
 
+#Global Metrics Associated with learning? 
+
 #Test For Differences in Clustering by Condition
 df_clust <- df[which(df$metric == 'clustering'), ]
 describeBy(df_clust, df_clust$condition)
@@ -77,13 +79,85 @@ t.test(module6_mean ~ condition, data = df_cent)
 ##### Test for Associations with Individual Characteristics
 #Test module clustering and centrality
 #read-in the behavioral data
-dat <- read.csv("/Users/jennygilbert/Google Drive/NIBL/Projects/18-0417 BeveL/data/paper_specific/betaseries/behavioral_data/betaseries_sample_november_update.csv", sep = ',')
+dat <- read.csv("/Users/jennygilbert/Google Drive/NIBL/Projects/18-0417 BeveL/data/analysis/betaseries/behavioral_data/betaseries_sample_november_update.csv", sep = ',')
 print(dat$ID)
-
 
 #Remove the blank lines added at the end (no clue why this happens)
 names(dat)
+dat$sensitivity_both <- (dat$sensitivity_punish + dat$sensitivity_reward)/2
 
+#Global Metrics
+dat$global_segregation_reward <- (dat$module0_clustering_reward+ dat$module1_clustering_reward +
+                                    dat$module2_clustering_reward + dat$module3_clustering_reward +
+                                    dat$module4_clustering_reward + dat$module5_clustering_reward +
+                                    dat$module6_clustering_reward + dat$module7_clustering_reward)/8
+
+cor.test(dat$global_segregation_reward, dat$sensitivity_reward)
+
+dat$global_hubness_reward <- (dat$module0_centrality_reward+ dat$module1_centrality_reward +
+                                    dat$module2_centrality_reward + dat$module3_centrality_reward +
+                                    dat$module4_centrality_reward + dat$module5_centrality_reward +
+                                    dat$module6_centrality_reward + dat$module7_centrality_reward)/8
+
+cor.test(dat$global_hubness_reward, dat$sensitivity_reward)
+
+dat$global_integration_reward <- (dat$module0_pc_reward+ dat$module1_pc_reward +
+                                dat$module2_pc_reward + dat$module3_pc_reward +
+                                dat$module4_pc_reward + dat$module5_pc_reward +
+                                dat$module6_pc_reward + dat$module7_pc_reward)/8
+
+cor.test(dat$global_integration_reward, dat$sensitivity_reward)
+
+#Punishment
+dat$global_segregation_punish <- (dat$module0_clustering_punish+ dat$module1_clustering_punish +
+                                    dat$module2_clustering_punish + dat$module3_clustering_punish +
+                                    dat$module4_clustering_punish + dat$module5_clustering_punish +
+                                    dat$module6_clustering_punish)/7
+
+cor.test(dat$global_segregation_punish, dat$sensitivity_punish)
+
+dat$global_hubness_punish <- (dat$module0_centrality_punish+ dat$module1_centrality_punish +
+                                dat$module2_centrality_punish + dat$module3_centrality_punish +
+                                dat$module4_centrality_punish + dat$module5_centrality_punish +
+                                dat$module6_centrality_punish)/7
+
+cor.test(dat$global_hubness_punish, dat$sensitivity_punish)
+
+dat$global_integration_punish <- (dat$module0_pc_punish+ dat$module1_pc_punish +
+                                    dat$module2_pc_punish + dat$module3_pc_punish +
+                                    dat$module4_pc_punish + dat$module5_pc_punish +
+                                    dat$module6_pc_punish)/7
+
+cor.test(dat$global_integration_punish, dat$sensitivity_punish)
+
+
+#Choice
+dat$global_segregation_choice <- (dat$module0_clustering_choice+ dat$module1_clustering_choice +
+                                    dat$module2_clustering_choice + dat$module3_clustering_choice +
+                                    dat$module4_clustering_choice + dat$module5_clustering_choice +
+                                    dat$module6_clustering_choice)/7
+
+cor.test(dat$global_segregation_choice, dat$sensitivity_reward)
+cor.test(dat$global_integration_choice, dat$sensitivity_punish)
+cor.test(dat$global_integration_choice, dat$sensitivity_both)
+
+dat$global_hubness_choice <- (dat$module0_centrality_choice+ dat$module1_centrality_choice +
+                                dat$module2_centrality_choice + dat$module3_centrality_choice +
+                                dat$module4_centrality_choice + dat$module5_centrality_choice +
+                                dat$module6_centrality_choice)/7
+
+cor.test(dat$global_hubness_choice, dat$sensitivity_reward)
+cor.test(dat$global_integration_choice, dat$sensitivity_punish)
+cor.test(dat$global_integration_choice, dat$sensitivity_both)
+
+dat$global_integration_choice <- (dat$module0_pc_choice+ dat$module1_pc_choice +
+                                    dat$module2_pc_choice + dat$module3_pc_choice +
+                                    dat$module4_pc_choice + dat$module5_pc_choice +
+                                    dat$module6_pc_choice)/7
+
+cor.test(dat$global_integration_choice, dat$sensitivity_reward)
+cor.test(dat$global_integration_choice, dat$sensitivity_punish)
+cor.test(dat$global_integration_choice, dat$sensitivity_both)
 
 ################################################## NON SIGNIFICANT #################################################################################### 
 ##Relation to Posttest Performance 
